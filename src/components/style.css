@@ -1,0 +1,8 @@
+.headertp{
+    background-color:#9B9B9B;
+    height:10px;
+    padding:30px;
+    width:100%;
+    display:flex;
+    z-index:100%;
+  }
