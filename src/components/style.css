@@ -6,3 +6,13 @@
     display:flex;
     z-index:100%;
   }
+.media{
+  display:flex;
+  flex-direction:column;
+  width:200px;
+  padding:5px;
+  background-color:#9B9B9B;
+  border-radius:10px;
+  position:relative;
+  
+}

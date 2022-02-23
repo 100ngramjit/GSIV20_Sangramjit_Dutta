@@ -1,9 +1,16 @@
 import React from 'react'
 import './style.css';
 
-function Cards() {
+function Cards({
+    id,poster,title,rating,desc
+}) {
   return (
-    <div>Cards</div>
+    <div className='media'>
+        <img clasName="poster" src={`https://image.tmdb.org/t/p/w300/${poster}`} alt={title}/>
+        <b className="title">{title}</b>
+        <h5 className="rating">{rating}</h5>
+        <p>{desc}</p>
+    </div>
   )
 }
 
