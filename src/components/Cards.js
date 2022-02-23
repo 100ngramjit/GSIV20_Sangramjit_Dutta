@@ -6,10 +6,10 @@ function Cards({
 }) {
   return (
     <div className='media'>
-        <img clasName="poster" src={`https://image.tmdb.org/t/p/w300/${poster}`} alt={title}/>
+        <img className="poster" src={`https://image.tmdb.org/t/p/w300/${poster}`} alt={title}/>
         <b className="title">{title}</b>
         <h5 className="rating">{rating}</h5>
-        <p>{desc}</p>
+        <p>{desc.split('.')[0]+'.'+ desc.split('.')[1]+'.'}</p>
     </div>
   )
 }

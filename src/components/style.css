@@ -1,11 +1,20 @@
 .headertp{
     background-color:#9B9B9B;
-    height:10px;
-    padding:30px;
+    height:20px;
+    padding:10px;
     width:100%;
     display:flex;
     z-index:100%;
   }
+  input {
+    font-size: 16px;
+    font-size: max(16px, 1em);
+    font-family: inherit;
+    padding: 0.25em 0.5em;
+    background-color: #fff;
+    border: 2px solid var(--input-border);
+    border-radius: 4px;
+  }  
 .media{
   display:flex;
   flex-direction:column;
@@ -14,5 +23,10 @@
   background-color:#9B9B9B;
   border-radius:10px;
   position:relative;
-  
+  margin:5px;
+}
+.Latest{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-around;
 }

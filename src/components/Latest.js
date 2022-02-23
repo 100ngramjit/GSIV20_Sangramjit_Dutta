@@ -14,10 +14,17 @@ function Latest() {
   }
   useEffect(()=>{
     fetchLatest();
+    window.addEventListener("scroll", handleScroll);
   },[])
+  const handleScroll = () => {
+        let userScrollHeight = window.innerHeight + window.scrollY;
+    let windowBottomHeight = document.documentElement.offsetHeight;
+    if (userScrollHeight >= windowBottomHeight) {
+      fetchLatest();
+    }
+  };
   return (
     <>
-    <h1>Latest Movies</h1>
     <div className="Latest">
        {
          content && content.map((c)=>(
