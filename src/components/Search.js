@@ -21,8 +21,8 @@ function Search() {
       .then((resp)=>resp.json())
       .then((result)=>{
           
-          console.log('antu rendi',result)
-          console.log('rendi',result.results)
+          console.log('hi',result)
+          console.log('hi',result.results)
           setcontent(result.results[0].name)
           console.log('last',content)
 
