@@ -1,10 +1,11 @@
 import React from 'react';
 import './style.css';
+import Search from "./Search";
 
 function header() {
   return (
       <span className='headertp'>
-        <input type="text" placeholder="search"></input>
+            <Search />
       </span>
 
   )

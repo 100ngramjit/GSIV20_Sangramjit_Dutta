@@ -9,7 +9,7 @@ function Cards({
         <img className="poster" src={`https://image.tmdb.org/t/p/w300/${poster}`} alt={title}/>
         <b className="title">{title}</b>
         <h5 className="rating">{rating}</h5>
-        <p>{desc.split('.')[0]+'.'+ desc.split('.')[1]+'.'}</p>
+        <p>{desc.split('.')[0]+'.'+ desc.split('.')[1]+'...'}</p>
     </div>
   )
 }

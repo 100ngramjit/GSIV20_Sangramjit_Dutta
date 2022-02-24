@@ -21,7 +21,7 @@ function Latest() {
     let windowBottomHeight = document.documentElement.offsetHeight;
     if (userScrollHeight >= windowBottomHeight) {
       fetchLatest();
-    }
+    }    
   };
   return (
     <>
