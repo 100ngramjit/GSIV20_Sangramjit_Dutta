@@ -5,7 +5,7 @@ import Cards from './Cards'
 
 function Search() {
   const [searchtxt,setsearchtxt]=useState("")
-  const [content,setcontent]=useState([])
+  const [content,setcontent]=useState({})
 
 //   const fetchSearch=async()=>{
 //     const {data}= await axios.get(`https://api.themoviedb.org/3/search/keyword?api_key=2f79f363fb4398298fea2fddf5996e0d&query=${searchtxt}&page=1`)
@@ -23,8 +23,8 @@ function Search() {
           
           console.log('hi',result)
           console.log('hi',result.results)
-          setcontent(result.results[0].name)
-          console.log('last',content)
+          setcontent(result.results)
+          console.log('last',content[0].name)
 
       })
       .catch((err)=>console.log(err))
