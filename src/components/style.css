@@ -36,10 +36,8 @@
 }
 .det{
   display:flex;
-  justify-content:flex-start;
-  flex-wrap:wrap;
 }
-.line1{
+/* .line1{
   display:flex;
   justify-content:flex-start;
   flex-wrap:wrap;
@@ -48,5 +46,5 @@
   display:flex;
   justify-content:flex-start;
   flex-wrap:wrap;
-}
+} */
 

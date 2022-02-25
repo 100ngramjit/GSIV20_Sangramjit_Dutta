@@ -34,14 +34,13 @@ function Details() {
           <div className="line1">
           <img className="poster" src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} alt={item.title}/>
           </div>
-          <h3>{item.title}({item.vote_average})</h3>
+          
           
         
         <div className="line2">
+        <h3>{item.title}({item.vote_average})</h3>
               <p>{item.release_date}|{item.runtime}mins|</p>
-          </div>
-          <div className="line3">
-            <p>Description:{item.overview}</p>
+              <p>Description:{item.overview}</p>
           </div>
           </div>
 
