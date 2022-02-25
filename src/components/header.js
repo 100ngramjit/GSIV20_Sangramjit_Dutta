@@ -2,10 +2,10 @@ import React from 'react';
 import './style.css';
 import Search from "./Search";
 
-function header() {
+function header(props) {
   return (
       <span className='headertp'>
-            <Search />
+            <Search changeUrl={props.changeUrl}/>
       </span>
 
   )

@@ -1,33 +1,14 @@
 import React from 'react'
 import './style.css';
-import {useState,useEffect} from 'react';
-import axios from 'axios';
 import Cards from './Cards'
 
-function Latest() {
-  const [content,setContent]=useState([]);
+function Latest({data}) {
 
-  const fetchLatest=async()=>{
-    const {data}=await axios.get("https://api.themoviedb.org/3/movie/upcoming?api_key=2f79f363fb4398298fea2fddf5996e0d&language=en-US&page=1");
-    console.log(data.results);
-    setContent(data.results);
-  }
-  useEffect(()=>{
-    fetchLatest();
-    window.addEventListener("scroll", handleScroll);
-  },[])
-  const handleScroll = () => {
-        let userScrollHeight = window.innerHeight + window.scrollY;
-    let windowBottomHeight = document.documentElement.offsetHeight;
-    if (userScrollHeight >= windowBottomHeight) {
-      fetchLatest();
-    }    
-  };
   return (
     <>
     <div className="Latest">
        {
-         content && content.map((c)=>(
+         data && data.map((c)=>(
             <Cards key={c.id} id={c.id} poster={c.poster_path} title={c.title} rating={c.vote_average} desc={c.overview} />
          ))
        }
