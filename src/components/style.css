@@ -30,3 +30,23 @@
   flex-wrap:wrap;
   justify-content:space-around;
 }
+.cards{
+  text-decoration:none;
+  color:black;
+}
+.det{
+  display:flex;
+  justify-content:flex-start;
+  flex-wrap:wrap;
+}
+.line1{
+  display:flex;
+  justify-content:flex-start;
+  flex-wrap:wrap;
+}
+.line2{
+  display:flex;
+  justify-content:flex-start;
+  flex-wrap:wrap;
+}
+
