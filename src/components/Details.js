@@ -9,13 +9,17 @@ function Details() {
   const [item, setItem] = useState(null);
   const[erro, setErro] = useState(null);
   const[load, setLoad] = useState(false);
+  const [cred,setCred]=useState(null)
 
 
   useEffect(() => {
     const getDetail = async()=>{  
             try{
                 const response = await axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=2f79f363fb4398298fea2fddf5996e0d&language=en-US`)
-                console.log(response.data)
+                const responsecred = await axios.get(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=2f79f363fb4398298fea2fddf5996e0d&language=en-US`)
+                console.log(response.data);
+                console.log(responsecred.data)
+                setCred(responsecred.data);
                 setItem(response.data);
             }catch(err){
                 setErro(err.message);
@@ -24,10 +28,13 @@ function Details() {
                 setLoad(false);
             }          
         }
+
+       
         getDetail();
   }, [id]);
 
   console.log(item.poster_path)
+  let cast=cred.cast;
   return (
         <>
         <div className="det">
@@ -40,6 +47,7 @@ function Details() {
         <div className="line2">
         <h3>{item.title}({item.vote_average})</h3>
               <p>{item.release_date}|{item.runtime}mins|</p>
+              <p>cast : {cast.map((c)=>c.name+" , ")}</p>
               <p>Description:{item.overview}</p>
           </div>
           </div>
