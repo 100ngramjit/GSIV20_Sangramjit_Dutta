@@ -1,14 +1,8 @@
-import React from 'react';
-import './style.css';
-import Search from "./Search";
+import React from "react";
+import "./style.css";
 
-function header(props) {
-  return (
-      <span className='headertp'>
-            <Search changeUrl={props.changeUrl}/>
-      </span>
-
-  )
+function header() {
+  return <span className="headertp">tmdb viewer</span>;
 }
 
 export default header;
